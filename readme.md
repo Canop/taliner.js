@@ -24,6 +24,12 @@ If a line ends with a space because of word wrapping and you click right to that
 
 I don't see any fix for that right now. if you have one, please contribute.
 
-# License 
+# Alternatives
+
+There's a specification for a [CaretPosition](https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition) in the browser.
+
+But it's only available on Firefox.
+
+# License
 
 Public Domain. Use as you wish and at your own risk.

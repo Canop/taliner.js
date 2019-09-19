@@ -5,7 +5,7 @@
 		$s1 = $('<span>').text('a').appendTo($d),
 		$s2 = $('<span>').appendTo($d),
 		lh =  $s1.height();
-    
+
 	$d.css({
 		width: $t.width(),
 		height: $t.height(),
@@ -27,14 +27,15 @@
 		se = input.selectionEnd,
 		v = input.value,
 		res = {};
-	
+
 	$s1.text(v);
 	res.linesNumber = $s1.height()/lh|0;
-		
+
 	$s1.text(v.slice(0, se));
 	$s2.text(v.slice(se));
+
 	res.caretOnFirstLine = input.selectionEnd===0 || ($s1.height()<=lh && $s1.offset().top===$s2.offset().top);
-	res.caretOnLastLine = $s2.height()===lh;
+	res.caretOnLastLine = $s2.height()<=lh;
 
 	$d.remove();
 	return res;
